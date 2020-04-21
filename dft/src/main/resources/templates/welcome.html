@@ -39,9 +39,9 @@
             <th>Buy</th>
         </tr>
         </thead>
-        <tr th:each="item : ${bicycle}" class="table-data">
-            <td width="40%"><img th:src="'images/' + ${item.name} + '.jpg'" alt="Bicycle" height="15%" width="20%"
-                                 class="center"></td>
+         <tr th:each="item : ${bicycle}" class="table-data">
+            <td width="40%"><a th:href="'images/' + ${item.name} + '.jpg'" th:target="_blank"><img th:src="'images/' + ${item.name} + '.jpg'" alt="Bicycle" height="15%" width="20%"
+                                                                class="center"></a></td>
             <td width="20%" class="bicyclename" th:text="${item.name}"></td>
             <td class="bicyclecost" th:text="${item.cost}"></td>
             <td th:text="${item.description}"></td>
